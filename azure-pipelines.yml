@@ -31,12 +31,14 @@ stages:
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
-        containerRegistry: 'thursday'
-        repository: 'newpic'
+        containerRegistry: 'kulalserver'
+        repository: 'preeeth3'
         command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
 - task: Docker@2
   inputs:
-    containerRegistry: 'thursday'
+    containerRegistry: 'kulalserver'
+    repository: 'preeeth33'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: '$(tag)'
